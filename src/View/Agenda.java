@@ -8,6 +8,7 @@ package View;
 import Controller.AgendaController;
 import javax.swing.JComboBox;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 
 /**
  *
@@ -106,6 +107,11 @@ public class Agenda extends javax.swing.JFrame {
 
         getContentPane().add(jComboBoxCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 280, 40));
 
+        jComboBoxServico.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBoxServicoItemStateChanged(evt);
+            }
+        });
         getContentPane().add(jComboBoxServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 350, 280, 40));
 
         TextValor.setText("0");
@@ -167,12 +173,16 @@ public class Agenda extends javax.swing.JFrame {
     }//GEN-LAST:event_TextIdActionPerformed
 
     private void ButtonAgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAgendarActionPerformed
-        // TODO add your handling code here:
+        this.controller.agendar();
     }//GEN-LAST:event_ButtonAgendarActionPerformed
 
     private void TextValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextValorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TextValorActionPerformed
+
+    private void jComboBoxServicoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxServicoItemStateChanged
+        this.controller.atualizaValor();     
+    }//GEN-LAST:event_jComboBoxServicoItemStateChanged
 
     /**
      * @param args the command line arguments
@@ -238,9 +248,10 @@ public class Agenda extends javax.swing.JFrame {
         this.controller.atualizaTabela();
         this.controller.atualizaCliente();
         this.controller.atualizaServico();
+        this.controller.atualizaValor();
         
         }
-
+    
     public JTable getTableAgendamentos() {
         return TableAgendamentos;
     }
@@ -267,6 +278,14 @@ public class Agenda extends javax.swing.JFrame {
 
     public Object getJComboBoxCliente() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public JTextField getTextValor() {
+        return TextValor;
+    }
+
+    public void setTextValor(JTextField TextValor) {
+        this.TextValor = TextValor;
     }
     
     
