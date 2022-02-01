@@ -10,7 +10,7 @@ package Controller.Helper;
  */
 public interface IHelper {
     
-    public abstract Object obeterModelo();
+    public abstract Object obterModelo();
     
     public abstract void limparTela();
     
