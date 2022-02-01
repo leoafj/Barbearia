@@ -43,6 +43,4 @@ public class LoginHelper implements IHelper{
         view.getTextSenha().setText("");
     }
 
-   
-    
 }
