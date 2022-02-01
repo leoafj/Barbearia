@@ -43,9 +43,6 @@ public class LoginHelper implements IHelper{
         view.getTextSenha().setText("");
     }
 
-    @Override
-    public Object obeterModelo() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+   
     
 }
