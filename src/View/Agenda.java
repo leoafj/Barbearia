@@ -181,8 +181,7 @@ public class Agenda extends javax.swing.JFrame {
     }//GEN-LAST:event_TextValorActionPerformed
 
     private void jComboBoxServicoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxServicoItemStateChanged
-        this.controller.atualizaValor();
-        
+        this.controller.atualizaValor();     
     }//GEN-LAST:event_jComboBoxServicoItemStateChanged
 
     /**
@@ -252,7 +251,7 @@ public class Agenda extends javax.swing.JFrame {
         this.controller.atualizaValor();
         
         }
-
+    
     public JTable getTableAgendamentos() {
         return TableAgendamentos;
     }

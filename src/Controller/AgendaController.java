@@ -56,6 +56,6 @@ public class AgendaController {
      public void atualizaValor(){
          Servico servico = helper.obterServico();
          helper.setarValor(servico.getValor());
-         
+        
      }
 }
