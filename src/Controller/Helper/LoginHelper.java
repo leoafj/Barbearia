@@ -11,7 +11,7 @@ import View.Login;
  *
  * @author leonardoa
  */
-public class LoginHelper {
+public class LoginHelper implements IHelper{
     
     private final Login view;
 
@@ -41,6 +41,11 @@ public class LoginHelper {
     public void limparTela(){
         view.getTextUsuario().setText("");
         view.getTextSenha().setText("");
+    }
+
+    @Override
+    public Object obeterModelo() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }
